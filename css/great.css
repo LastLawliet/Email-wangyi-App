@@ -1,0 +1,17 @@
+main{flex-wrap:wrap;background:#efefef;padding :.24rem 0.075rem .2rem;position:relative;}
+.dl{display:inline-block;}
+dl.half_box{width:2.475rem;height:auto;background:#fff;margin: 0 .075rem .15rem;display:inline-block;}
+dl.half_box dt{height:auto;}
+dl.half_box dt img{width:100%;height:auto;}
+dl.half_box dd{height:1.7rem;padding:0 .12rem;}
+dl.half_box dd p.des{color:#333;padding-top:.38rem;height:.55rem;box-sizing:content-box;
+	line-height:.275rem;font-size:.16rem;}
+
+dl.half_box dd div.bottom{height:.8rem;padding:.2rem 0;line-height:.4rem;color:#888;
+	display:flex;justify-content:space-between;align-items:center;font-size:.13rem;}
+dl.half_box dd div.bottom div.person{height:100%;}
+dl.half_box dd div.bottom div.person img{height:100%;vertical-align:top;}
+dl.half_box dd div.bottom div.person span.name{height:100%;}
+dl.half_box dd div.bottom div.zan{font-size:.17rem;height:100%;}
+dl.half_box dd div.bottom div.zan i.i_count{transition:.3s;}
+dl.half_box dd div.bottom div.zan i.iconfont{padding-left:0.04rem;display:inline-block;transition:.1s;}

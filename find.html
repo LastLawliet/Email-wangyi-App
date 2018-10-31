@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>生活-发现</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/live.css">
+    <link rel="stylesheet" href="css/find.css">
+
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+
+</head>
+<body>
+    <div class="all">
+        <header>
+            <div class="shenghuo">生活</div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="live.html">推荐</a></li>
+                <li><a class="now" href="find.html">发现</a></li>
+                <li><a href="look.html">LOOK</a></li>
+                <li><a href="great.html">好物</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <dl class="banner_box">
+                <dt>
+                    <img src="img/box2-1.jpg" alt="">
+                    <div class="bottom">
+                        <p class="view"><i class="iconfont">&#xe642;</i><span class="viwe_count">97</span></p>
+                    </div>
+                </dt>
+                <dd>
+                    <h3>严选断货补单王</h3>
+                    <p>这些爆款就是这么红</p>
+                </dd>
+            </dl>
+            <dl class="banner_box">
+                <dt>
+                    <img src="img/box2-2.jpg" alt="">
+                    <div class="bottom">
+                        <p class="view"><i class="iconfont">&#xe642;</i><span class="viwe_count">105.6</span>k</p>
+                    </div>
+                </dt>
+                <dd>
+                    <h3>丹麦皇室用的顶配鹅绒被，长啥样？</h3>
+                    <p>现在预订，付尾款最高直减800元</p>
+                </dd>
+            </dl>
+            <dl class="banner_box">
+                <dt>
+                    <img src="img/box2-1.jpg" alt="">
+                    <div class="bottom">
+                        <p class="view"><i class="iconfont">&#xe642;</i><span class="viwe_count">105.6</span>k</p>
+                    </div>
+                </dt>
+                <dd>
+                    <h3>严选铁粉信赖榜</h3>
+                    <p>闭上眼睛买，它们不会错</p>
+                </dd>
+            </dl>
+            <dl class="banner_box">
+                <dt>
+                    <img src="img/box1-1.jpg" alt="">
+                    <div class="bottom">
+                        <p class="view"><i class="iconfont">&#xe642;</i><span class="viwe_count">105.6</span>k</p>
+                    </div>
+                </dt>
+                <dd>
+                    <h3>严选铁粉信赖榜</h3>
+                    <p>闭上眼睛买，它们不会错</p>
+                </dd>
+            </dl>
+        </main>
+
+        <footer>
+            <ul>
+                <li><a href="index.html"><i class="iconfont">&#xe642;</i><span>邮件</span></a></li>
+                <li><a href="live.html" class="now"><i class="iconfont">&#xe642;</i><span>生活</span></a></li>
+                <li><a href="phone.html"><i class="iconfont">&#xe642;</i><span>通讯录</span></a></li>
+                <li><a href="me.html"><i class="iconfont">&#xe642;</i><span>我</span></a></li>
+            </ul>
+        </footer>
+
+        <div class="order_car">
+            <ul>
+                <li><a href="#"><i class="iconfont">&#xe642;</i><span>购物车</span></a></li>
+                <li><a href="#"><i class="iconfont">&#xe642;</i><span>订单</span></a></li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+	
+	// main滑到底部
+	$("main").scroll(function(){
+		if(this.scrollTop == this.scrollHeight-this.clientHeight){
+			setTimeout(function(){
+				create();
+			},500);
+		}
+	})
+	
+	// 滚动
+	function create(){
+		let asideIndex = parseInt(Math.random()*4);
+		for(let i=0;i<4;i++){
+			let newBox = $(".banner_box").eq(i).clone();			//			1-4
+			newBox.find("img").attr("src","img/box2-" + Math.ceil(Math.random()*4) + ".jpg");
+			newBox.appendTo("main");
+		}
+	}
+</script>
+<script type="text/javascript" src="js/mypathURL.js"></script>

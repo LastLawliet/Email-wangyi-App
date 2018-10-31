@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录-login</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/login.css">
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+	<div class="all">
+		<header>
+			<ul class="top">
+				<li><i class="close">X</i></li>
+				<li></li>
+				<li><i class="iconfont"></i></li>
+			</ul>
+		</header>
+		<main>
+			<h2>请输入手机号</h2>
+			<div class="tip">短信验证码已发送至 <span class="phone_11"></span></div>
+
+			<div class="form">
+				<div class="content">
+					<div class="input">
+						<input type="text" id="tel">
+						<label for="tel">请输入手机号</label>
+						<span class="close">X</span>
+					</div>
+					<div class="identify">重发验证码<i>(</i><span class="time60">60</span><i>)</i></div>
+				</div>
+			</div>
+
+			<input type="button" value="获取验证码" class="btn get">
+			<input type="button" value="登录" class="btn login">
+
+			<a href="#">找回大师账号</a>
+		</main>
+	</div>
+<script type="text/javascript">
+	// top close
+	$(".top .close").click(function(){
+		window.location.href="me.html";
+	})
+	// input 框输入
+	$("#tel").keyup(function(){
+		// 两端去空
+		if(this.value.length != this.value.trim().length){
+			$(this).val(this.value.trim());
+		}
+		// 显示
+		if(this.value.length>0){
+			$(this).next().css({"display":"none"});
+			$(this).next().next().css({"display":"block"});
+			$(".get").css({"opacity":"1"});
+		}else{// 隐藏
+			$(this).next().css({"display":"block"});
+			$(this).next().next().css({"display":"none"});
+			$(".get").css({"opacity":"0.5"});
+		}
+	});
+	// input 框后的close图标
+	$(".input .close").click(function(){
+		$(this).parent().children("input").val("");
+		$(this).parent().children("label").css({"display":"block"});
+	});
+	// 获取验证码
+	$(".get").click(function(){
+		// 半透明直接 禁用
+		if($(this).css("opacity") != "1"){
+			return;
+		}
+		// 非半透明
+		var tel = $("#tel").val();
+		var reg = /^\d{11}$/
+		if(reg.test(tel)){
+			// 验证成功
+			$("main h2").text("请输入短信验证码");
+			$(".tip").css({"display":"block"});
+			$(".phone_11").text(tel);
+
+			//重新发送
+			$(".identify").css({"display":"block"});
+			// 定时器 
+
+			$(".time60").parent().css({"color":"#cdcdcd"});
+			time($(".time60"),60);
+			$(".get").css({"display":"none"});
+			$(".login").css({"display":"block"});
+			$("#tel").val("");
+			$("label").css({"display":"block"});
+			$("label").text("请输入验证码");
+
+			// 找回大师账号
+			$("main > a").css({"display":"none"});
+		}else if(/\d+/.test(tel)){
+			promp("仅支持中国大陆地区手机号");
+		}else{
+			promp("请输入正确的手机号");
+		}
+	});
+	// 登录
+	$(".login").click(function(){
+		window.location.href = "me.html?username=" + $(".phone_11").text();
+	});
+
+	// 重新发送
+	$(".identify").click(function(){
+		$(".time60").prev().text("(")
+		$(".time60").next().text(")")
+		$(".time60").text("60")
+		$(".time60").parent().css({"color":"#cdcdcd"});
+		time($(".time60"),60);
+	});
+
+	let mytimer;
+	function time($dom,num){
+		if(mytimer){
+			return;
+		}
+			console.log("mytimer");	
+		mytimer = setInterval(function(){
+			num--;
+			if(num<0){
+				num = 0;
+				$dom.text("");
+				$dom.prev().text("");
+				$dom.next().text("");
+				clearInterval(mytimer);
+				mytimer = null;
+				$dom.parent().css({"color":"#000"});
+				return;
+			};
+			$dom.text(num);
+		},100)
+	}
+
+	function promp(str){
+		let parent;
+		let alert0;
+		if($("span#hint0").length>0){
+			parent = $("span#hint0");
+			alert0 = $("span#hint");
+		}else{
+
+			parent = $("<span id='hint0'></span>");
+			$("body").append(parent);
+			parent.css({
+				"position":"fixed",
+				"top":"0",
+				"width":"100%",
+				"height":"100%",
+				background:"rgba(0,0,0,0.5)",
+			});
+			alert0 = $("<span id='hint'></span>");
+			alert0.css({
+				"position":"absolute",
+				"width":"90%",
+				"height":"100px",
+				"display":"block",
+				"line-height":"100px",
+				"color":"#000",
+				"text-align":"center",
+				"left":"0",
+				"right":"0",
+				"top":"0",
+				"bottom":0,
+				"margin":"auto",
+				"border-radius":"10px",
+				"background":"rgba(255,255,255,1)",
+				"font-size":".25rem",
+				// "display":"none",
+				// "opacity":0,
+			});
+			parent.append(alert0);
+			// 点击消失
+			parent.click(function(){
+				$(this).css({"display":"none"});
+			});
+		}
+		// alert0.stop(true);
+		//显示
+		parent.css({"display":"block"});
+		alert0.text(str);
+		
+	}
+</script>
+</body>
+</html>

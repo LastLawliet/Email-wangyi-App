@@ -1,0 +1,75 @@
+@charset "utf-8";
+/* Ghost开源博客页面自适应 */
+/*========样式重置========*/
+/*--------第一步 清样式 清间距----------*/
+body,h1,h2,h3,h4,h5,h6,p,a,img,form,input,select,figure,figcaption,ul,li,ol,dl,dt,dd,table,tr,th,td,thead,tbody,tfoot{margin: 0;padding: 0;}
+
+ul,ol{list-style-type: none;}
+
+input{outline: none;}
+i{font-style:normal;}
+
+*{box-sizing:border-box;}
+
+/*---------定义全局样式-----------*/
+html,body{height:100%;}
+body{color:#333;font-family:"Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "WenQuanYi Micro Hei", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;}
+
+@media screen and (min-width:414px){
+    body{font-size:18px;!important;}
+}
+@media screen and (min-width:375px) and (max-width:413px){
+    body{font-size:16px;!important;}
+}
+@media screen and (max-width:374px){
+    body{font-size:14px;!important;}
+}
+
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;}
+
+
+
+/*---------定义公共样式----------*/
+a{text-decoration:none; cursor:pointer;color:#505050;display:inline-block;}
+
+.l{float:left;}
+.r{float:right;}
+
+html{font-size:18.52vw;}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/iconfont.woff') format('woff'),
+    url('../font/iconfont.ttf') format('truetype'),
+    url('../font/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont{
+    font-family:"iconfont" !important;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.all{height:100%;display:flex;flex-direction:column;}
+.all header{height:.68rem;background:#fafafa;border-bottom:1px solid #e4e4e4;display:flex;align-content: center;}
+
+
+main{flex:1;overflow:auto;padding-bottom:1.37rem;background:white;}
+/* 隐藏滚动条 */
+main::-webkit-scrollbar {display: none;}
+
+/*====================footer===================*/
+footer{ height:.75rem; background:#fafafa; border-top:1px solid #e5e5e5;}
+footer ul{ height:100%; display:flex;}
+footer ul li{ flex:1; text-align:center;}
+footer ul li a{color:#7e7e7e;height:100%; display:block;}
+footer ul li a.now{color:#4196ff;}
+footer ul li a i{ display:block; line-height:.47rem; font-size:23px;}
+footer ul li a span{ display:block; font-size:10px;}

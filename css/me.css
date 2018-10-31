@@ -1,0 +1,17 @@
+main{display:block;background:#efefef;padding-bottom:0;}
+
+.pack{margin-bottom:.3rem;}
+.pack:last-of-type{margin-bottom:0;}
+.pack li{height:.81rem;background:#fff;display: flex;}
+.pack li.user{height:1.275rem;}
+.pack li.user .right{padding-right:.225rem;}
+.pack li.pic{height:6.25rem;background:url(../img/hi.jpg), no-repeat;background-size: cover;}
+
+.login_btn{line-height: .5rem;padding: 0 .075rem;border:1px solid #3774d1;border-radius:7px;}
+
+.pack li span.left{width:.84rem;justify-content: center;align-items: center;display: flex;font-size:.25rem;}
+.pack li div.right{flex:1;border-bottom:1px solid #e5e5e5;display: flex;align-items: center;justify-content: space-between;}
+.pack li:last-child div.right{border-bottom:0;}
+.pack li div.right p{font-size:.25rem;color:#333;}
+span.text5{font-size:.18rem;color:#999;}
+.pack li div.right span i.gt{padding:0 .23rem;color:#e5e5e5;}

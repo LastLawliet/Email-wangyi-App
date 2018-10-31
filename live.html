@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>生活</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/live.css">
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <style>
+        .swiper-container {
+            width: 5.4rem;
+			padding-bottom:.515rem;
+			box-sizing:content-box;
+            height: 3rem;
+            margin:0 -0.06rem .2rem;
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+        .swiper-slide img{width:100%;height:100%;}
+		
+		/* 豆豆行 */
+		.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+			bottom:.18rem;
+		}
+		main{padding-top:0;}
+    </style>
+</head>
+<body>
+    <div class="all">
+        <header>
+            <div class="shenghuo">生活</div>
+        </header>
+        <nav>
+            <ul>
+                <li><a class="now" href="live.html">推荐</a></li>
+                <li><a href="find.html">发现</a></li>
+                <li><a href="look.html">LOOK</a></li>
+                <li><a href="great.html">好物</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/banner1.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="img/banner2.jpg" alt=""></div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <dl class="banner_box">
+                <dt>
+                    <img src="img/box1-1.jpg" alt="">
+                    <div class="bottom">
+                        <p class="view"><i class="iconfont">&#xe642;</i><span class="viwe_count">105.6</span>k</p>
+                    </div>
+                </dt>
+                <dd>
+                    <h3>严选铁粉信赖榜</h3>
+                    <p>闭上眼睛买，它们不会错</p>
+                </dd>
+            </dl>
+            <dl class="banner_box">
+                <dt>
+                    <img src="img/box1-2.jpg" alt="">
+                    <div class="bottom">
+                        <p class="view"><i class="iconfont">&#xe642;</i><span class="viwe_count">128.2</span>k</p>
+                    </div>
+                </dt>
+                <dd>
+                    <h3>严选无限回购TOP榜</h3>
+                    <p>这些商品买过1次，还会想买第2件</p>
+                </dd>
+            </dl>
+            <dl class="banner_box">
+                <dt>
+                    <img src="img/box1-3.jpg" alt="">
+                    <div class="bottom">
+                        <p class="view"><i class="iconfont">&#xe642;</i><span class="viwe_count">46.2</span>k</p>
+                    </div>
+                </dt>
+                <dd>
+                    <h3>日用品毫无榜</h3>
+                    <p>日常不普通，让自己过得好一点</p>
+                </dd>
+            </dl>
+            <dl class="banner_box">
+                <dt>
+                    <img src="img/box1-4.jpg" alt="">
+                    <div class="bottom">
+                        <p class="view"><i class="iconfont">&#xe642;</i><span class="viwe_count">63.2</span>k</p>
+                    </div>
+                </dt>
+                <dd>
+                    <h3>严选新中式厨房</h3>
+                    <p>跟着甄选家，探索一口好锅的诞生</p>
+                </dd>
+            </dl>
+            <dl class="banner_box aside">
+                <dt>
+                    <img src="img/aside1.jpg" alt="">
+                    <div class="bottom">
+                        <p class="view"><i class="iconfont">&#xe642;</i><span class="viwe_count">63.2</span>k</p>
+                    </div>
+                </dt>
+                <dd>
+                    <h3>今年女鞋更好穿的秘密</h3>
+                    <p>各位小仙女在买网鞋时，一定会有这样的经历吧：有些鞋子样子好看，但回去却硬到磨脚</p>
+                </dd>
+            </dl>
+        </main>
+
+        <footer>
+            <ul>
+                <li><a href="index.html"><i class="iconfont">&#xe642;</i><span>邮件</span></a></li>
+                <li><a href="live.html" class="now"><i class="iconfont">&#xe642;</i><span>生活</span></a></li>
+                <li><a href="phone.html"><i class="iconfont">&#xe642;</i><span>通讯录</span></a></li>
+                <li><a href="me.html"><i class="iconfont">&#xe642;</i><span>我</span></a></li>
+            </ul>
+        </footer>
+
+        <div class="order_car">
+            <ul>
+                <li><a href="#"><i class="iconfont">&#xe642;</i><span>购物车</span></a></li>
+                <li><a href="#"><i class="iconfont">&#xe642;</i><span>订单</span></a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+<!-- Swiper JS -->
+<script src="js/swiper.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        speed:1500,
+        loop:true,
+        autoplay : {
+            delay:3500,
+            disableOnInteraction: true
+        }
+    });
+	
+	// main滑到底部
+	$("main").scroll(function(){
+		if(this.scrollTop == this.scrollHeight-this.clientHeight){
+			setTimeout(function(){
+				create();
+			},300);
+		}
+	})
+	
+	// 滚动
+	function create(){
+		let asideIndex = parseInt(Math.random()*4);
+		for(let i=0;i<4;i++){
+			if(i == asideIndex){
+				let newAside = $(".aside").eq(0).clone();			//				1-3
+				newAside.find("img").attr("src","img/aside"+Math.ceil(Math.random()*3) + ".jpg");
+				newAside.appendTo("main");
+			}else{
+				let newBox = $(".banner_box").eq(i).clone();		//				1-10
+				newBox.find("img").attr("src","img/box1-" + Math.ceil(Math.random()*10) + ".jpg");
+				newBox.appendTo("main");
+			}
+		}
+	}
+</script>
+<script type="text/javascript" src="js/mypathURL.js"></script>

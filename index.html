@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>网易邮箱App</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+    <div class="all">
+        <header>
+            <span><i class="iconfont">&#xe642;</i></span>
+            <div class="youxiang">
+                <h5>收件箱</h5>
+                <p>whatfl@163.com</p>
+            </div>
+            <ul class="right">
+                <li><i class="iconfont">&#xe642;</i></li>
+                <li><i class="iconfont">&#xe642;</i></li>
+                <li><i class="iconfont">&#xe642;</i></li>
+            </ul>
+        </header>
+        <main>
+            <div class="read">
+                <ul class="readed">
+                    <li>全标已读</li>
+                    <li>多选</li>
+                </ul>
+            </div>
+            <dl>
+                <dt><img src="img/dt005.jpg" alt=""></dt>
+                <dd>
+                    <h4 class="title">网易邮件中心</h4>
+                    <p class="des">恭喜！您获得一个免单资格！请尽快使用！</p>
+                    <p class="text">大师0元购-10月 如果你不想在收到该产品的推荐邮件，请点击这里退订</p>
+                    <span class="time">06:12</span>
+                </dd>
+            </dl>
+            <dl>
+                <dt><img src="img/dt004.jpg" alt=""></dt>
+                <dd>
+                    <h4 class="title">推广邮件</h4>
+                    <p class="des">网易严选</p>
+                    <p class="text">双USB接口便携充电器等三款使用出行装备等你选购</p>
+                    <span class="time">10-16</span>
+                </dd>
+            </dl>
+            <dl>
+                <dt><img src="img/dt003.jpg" alt=""></dt>
+                <dd>
+                    <h4 class="title">网易账号中心</h4>
+                    <p class="des">欢迎注册网易账号</p>
+                    <p class="text">此邮件没有内容</p>
+                    <span class="time">10-01</span>
+                </dd>
+            </dl>
+            <dl>
+                <dt><img src="img/dt001.jpg" alt=""></dt>
+                <dd>
+                    <h4 class="title">网易邮箱大师团队</h4>
+                    <p class="des">欢迎使用网易邮箱大师</p>
+                    <p class="text">网易邮箱大师欢迎信</p>
+                    <span class="time">09-30</span>
+                </dd>
+            </dl>
+
+            <!-- start -->
+            <dl>
+                <dt><img src="img/dt005.jpg" alt=""></dt>
+                <dd>
+                    <h4 class="title">网易邮件中心</h4>
+                    <p class="des">恭喜！您获得一个免单资格！请尽快使用！</p>
+                    <p class="text">大师0元购-10月 如果你不想在收到该产品的推荐邮件，请点击这里退订</p>
+                    <span class="time">06:12</span>
+                </dd>
+            </dl>
+            <dl>
+                <dt><img src="img/dt004.jpg" alt=""></dt>
+                <dd>
+                    <h4 class="title">推广邮箱</h4>
+                    <p class="des">网易严选</p>
+                    <p class="text">双USB接口便携充电器等三款使用出行装备等你选购</p>
+                    <span class="time">10-16</span>
+                </dd>
+            </dl>
+            <dl>
+                <dt><img src="img/dt003.jpg" alt=""></dt>
+                <dd>
+                    <h4 class="title">网易账号中心</h4>
+                    <p class="des">欢迎注册网易账号</p>
+                    <p class="text">此邮件没有内容</p>
+                    <span class="time">10-01</span>
+                </dd>
+            </dl>
+            <dl>
+                <dt><img src="img/dt002.jpg" alt=""></dt>
+                <dd>
+                    <h4 class="title">京东品质生活日 京造全场低至3折</h4>
+                    <p class="text">京东全球好物节 品质生活日 京造全场地址3折</p>
+                    <span class="time">广告</span>
+                </dd>
+            </dl>
+            <dl>
+                <dt><img src="img/dt001.jpg" alt=""></dt>
+                <dd>
+                    <h4 class="title">网易邮箱大师团队</h4>
+                    <p class="des">欢迎使用网易邮箱大师</p>
+                    <p class="text">网易邮箱大师欢迎信</p>
+                    <span class="time">09-30</span>
+                </dd>
+            </dl>
+        </main>
+
+        <footer>
+            <ul>
+                <li><a href="index.html" class="now"><i class="iconfont">&#xe642;</i><span>邮件</span></a></li>
+                <li><a href="live.html"><i class="iconfont">&#xe642;</i><span>生活</span></a></li>
+                <li><a href="phone.html"><i class="iconfont">&#xe642;</i><span>通讯录</span></a></li>
+                <li><a href="me.html"><i class="iconfont">&#xe642;</i><span>我</span></a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>
+<script type="text/javascript" >
+    // 蓝色小图标
+    $(".all header ul li:first-child").toggle(
+        function(){
+            $(this).children().css({"background":"#4196ff"});
+        },function(){
+            $(this).children().css({"background":""});
+        }
+    );
+    // 鼠标滚动事件
+    // window.onmousewheel
+    // window.onDOMMouseScroll 兼容firefox
+    // window.onmousewheel != undefined?(window.onmousewheel):(window.onDOMMouseScroll) = function(e){
+    //     console.log(e.wheelDelta);//  上正下负  火狐用 e.detail  上 -3 下 3
+    //     if(e.wheelDelta>0 && $("main")[0].scrollTop == 0){// 向上滚
+    //         $("main").animate({"margin-top":0},200);
+    //     }else if(e.wheelDelta<0 && $("main").css("margin-top") == "0px"){// 显示状态下 向下滚
+    //         $("main").animate({"margin-top":-30},200);
+    //     }
+    // }
+    $("body").onmousemove = function(e){
+        console.log(e)
+    }
+    // touch 事件
+    // $("main")[0].ontouchstart=function(e){
+        // console.log(e.changeTouches)
+        // console.log(e.touches,e.touches[0].clientX,e.touches[0].clientY)
+        // if(this.scrollTop==0)
+        // $(this).animate({"margin-top":0,"scrollTop":30},200);
+    // }
+    
+    let height = -parseInt($("main").css("margin-top"));
+    $("main")[0].ontouchend = function(e){
+        console.log(e);
+        $(this).stop(true);
+        console.log("end");
+        if(this.scrollTop>height/2&&this.scrollTop<height && $(this).css("margin-top")=="0px"){
+            console.log("下半段");
+            $(this).animate({"margin-top":-height,scrollTop:0},200);
+            // this.scrollTop = 0;
+        }else if(this.scrollTop<=height/2 && $(this).css("margin-top")=="0px"){
+            console.log("上半段");
+            $(this).animate({"margin-top":0,scrollTop:0},200);
+            // this.scrollTop = 0;
+        }else if(this.scrollTop==0){
+            console.log("出现");
+            $(this).animate({"margin-top":0,scrollTop:0},200);
+        }
+    };
+
+</script>
+<script type="text/javascript" src="js/mypathURL.js"></script>

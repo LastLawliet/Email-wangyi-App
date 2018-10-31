@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>生活-LOOK</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/live.css">
+    <link rel="stylesheet" href="css/great.css">
+
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+    <div class="all">
+        <header>
+            <div class="shenghuo">生活</div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="live.html">推荐</a></li>
+                <li><a href="find.html">发现</a></li>
+                <li><a class="now" href="look.html">LOOK</a></li>
+                <li><a href="great.html">好物</a></li>
+            </ul>
+        </nav>
+        <main>
+			<div class='dl'>
+				<dl class="banner_box half_box">
+					<dt><img src="img/half2.jpg" ></dt>
+					<dd>
+						<p class="des">小小只超可爱漫展的时候买了一只大的，...</p>
+						<div class="bottom">
+							<div class="person">
+								<img src="img/ihead6.jpg" >
+								<span class="name">华****</span>
+							</div>
+							<div class="zan">
+								<i class="i_count">点赞</i><i class="iconfont">&#xe623;</i>
+							</div>
+						</div>
+					</dd>
+				</dl>
+			</div>
+			<div class="dl">
+				<dl class="banner_box half_box">
+					<dt><img src="img/half9.jpg" ></dt>
+					<dd>
+						<p class="des">真的是太漂亮了！！！喜欢的不行不行的！</p>
+						<div class="bottom">
+							<div class="person">
+								<img src="img/ihead1.jpg" >
+								<span class="name">只争朝夕</span>
+							</div>
+							<div class="zan">
+								<i class="i_count">点赞</i><i class="iconfont">&#xe623;</i>
+							</div>
+						</div>
+					</dd>
+				</dl>
+			</div>
+			<div class="dl">
+				<dl class="banner_box half_box">
+					<dt><img src="img/half8.jpg" ></dt>
+					<dd>
+						<p class="des">如何如何？是不是很好很不错？？？</p>
+						<div class="bottom">
+							<div class="person">
+								<img src="img/ihead2.jpg" >
+								<span class="name">wangzhich...</span>
+							</div>
+							<div class="zan">
+								<i class="i_count">点赞</i><i class="iconfont">&#xe623;</i>
+							</div>
+						</div>
+					</dd>
+				</dl>
+			</div>
+			<div class="dl">
+				<dl class="banner_box half_box">
+					<dt><img src="img/half7.jpg" ></dt>
+					<dd>
+						<p class="des">如其他评论所说，包包因为定型的缘故，皮质较硬...</p>
+						<div class="bottom">
+							<div class="person">
+								<img src="img/ihead3.jpg" >
+								<span class="name">1****6</span>
+							</div>
+							<div class="zan">
+								<i class="i_count">点赞</i><i class="iconfont">&#xe623;</i>
+							</div>
+						</div>
+					</dd>
+				</dl>
+			</div>
+        </main>
+
+        <footer>
+            <ul>
+                <li><a href="index.html"><i class="iconfont">&#xe642;</i><span>邮件</span></a></li>
+                <li><a href="live.html" class="now"><i class="iconfont">&#xe642;</i><span>生活</span></a></li>
+                <li><a href="phone.html"><i class="iconfont">&#xe642;</i><span>通讯录</span></a></li>
+                <li><a href="me.html"><i class="iconfont">&#xe642;</i><span>我</span></a></li>
+            </ul>
+        </footer>
+
+        <div class="order_car">
+            <ul>
+                <li><a href="#"><i class="iconfont">&#xe642;</i><span>购物车</span></a></li>
+                <li><a href="#"><i class="iconfont">&#xe642;</i><span>订单</span></a></li>
+            </ul>
+        </div>
+    </div>
+	
+<script type="text/javascript">
+	var heightArr = [16.67,16.67];
+	var dls = $(".dl");
+	for(let i=0;i<dls.length;i++){
+		positionDl(dls[i]);
+	}
+	
+	function positionDl(dom){
+		var boxHeight = 0,minBoxHeight = 0,minBoxIndex = 0;
+		var boxWidth = dom.offsetWidth;
+		console.log(boxWidth,dom.clientWidth,dom.scrollWidth);
+		boxHeight = dom.offsetHeight;
+		minBoxHeight = Math.min.apply(this,heightArr);
+		minBoxIndex = heightArr.indexOf(minBoxHeight);
+		// 定位
+		$(dom).css({
+			"position":"absolute",
+			"left":minBoxIndex * boxWidth + 5.2,
+			"top":minBoxHeight
+		});
+		// 更改 数组中的数据
+		console.log(heightArr,minBoxIndex);
+		heightArr[minBoxIndex] += dom.offsetHeight;
+	}
+	
+	// main滑到底部
+	$("main").scroll(function(){
+		if(this.scrollTop == this.scrollHeight-this.clientHeight){
+			setTimeout(function(){
+				create();
+			},300);
+		}
+	});
+	
+	// 滚动
+	function create(){
+		let asideIndex = parseInt(Math.random()*4);
+		for(let i=0;i<4;i++){
+			// 克隆一个div
+			let newBox = $(".dl").eq(i).clone();// jQuery对象		1-10
+			newBox.find("dt img").attr("src","img/half" + Math.ceil(Math.random()*10) + ".jpg");
+			// 头像															0-6
+			newBox.find(".person img").attr("src","img/ihead" + Math.floor(Math.random()*7) + ".jpg");
+			newBox.find(".i_count").text(Math.ceil(Math.random()*1000));
+			newBox.find(".iconfont").css({"color":""});
+			newBox.css({"opacity":0});
+			newBox.appendTo("main");
+			setTimeout(function(){
+				positionDl(newBox[0]);
+				newBox.css({"opacity":1});
+			},200);
+			
+		}
+	}
+	
+	// 点赞 委托
+	$("main").on("click",".zan",function(){
+		// this 是 .zan
+		let $count = $(this).children(".i_count");
+		let count = parseInt($count.text());
+		let xin = $count.next();
+		console.log(xin.css("color"));
+		if(xin.css("color") == "rgb(255, 0, 0)"){
+			// 提示框
+			promp("您已经给他点过赞了")
+			return;
+			}
+		xin.css({"transform":"scale(1.5)","color":"red"});
+		setTimeout(function(){
+			xin.css({"transform":"scale(1)"});
+		},100);
+		if(isNaN(count)){
+			count=0;
+		}
+		count++;
+		$count.text(count);
+	});
+	
+	function promp(str){
+		let alert0;
+		if($("span#hint").length>0){
+			alert0 = $("span#hint");
+		}else{
+			alert0 = $("<span id='hint'>"+ str +"</span>");
+			alert0.css({
+				"position":"fixed",
+				"width":"50%",
+				"height":"25px",
+				"line-height":"25px",
+				"color":"#fff",
+				"text-align":"center",
+				"left":"0",
+				"right":"0",
+				"top":"0",
+				"bottom":0,
+				"margin":"auto",
+				"border-radius":"5px",
+				"background":"rgba(0,0,0,0.4)",
+				"display":"none",
+				"opacity":0,
+			});
+			$("body").append(alert0);
+		}
+		alert0.stop(true);
+		//显示
+		alert0.css({"display":"block"});
+		alert0.animate({"opacity":1},50).delay(500).animate({"opacity":0},800);
+		
+	}
+</script>
+<script type="text/javascript" src="js/mypathURL.js"></script>
+</body>
+</html>

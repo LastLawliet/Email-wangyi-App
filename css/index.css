@@ -1,0 +1,22 @@
+.all header{z-index: 1;}
+.all header span{width:.87rem;height:100%;line-height: .68rem;text-align: center;font-size:.32rem}
+.all header div.youxiang{flex:1;display:flex;flex-direction:column;justify-content:center;}
+.all header div.youxiang h5{color:#313131;font-weight:normal;line-height:.26rem;font-size:.20rem;}
+.all header div.youxiang p{color:#838383;font-weight:normal;line-height:.20rem;font-size:.14rem;}
+.all header ul.right{width:2.24rem;display:flex;padding:0 .16rem;}
+.all header ul.right li{flex:1;display: flex;justify-content: center;align-items: center;}
+.all header ul.right li i{width:.51rem;height:.4rem;border-radius:.06rem;text-align:center;line-height:.4rem;font-size:.25rem;}
+
+main{margin-top:-.6rem;}
+main div.read{height:.6rem;border-bottom:1px solid #e4e4e4;}
+main div.read ul.readed{height:100%;display:flex;align-items: center;}
+main div.read ul.readed li{flex:1;text-align: center;color:#e4e4e4;border-right:1px solid #e5e5e5;}
+main div.read ul.readed li:last-of-type{flex:1;text-align: center;color:#4196ff;border-right:0;}
+main dl{height:1.37rem;border-bottom: 1px solid #e4e4e4;display: flex;align-items: center}
+main dl dt{width:.87rem;height:100%;display:flex;}
+main dl dt img{width:.56rem;height:.56rem;border-radius:50%;margin:auto;}
+main dl dd{flex:1;font-size:12px;position:relative;padding-right:.7rem;}
+main dl dd h4{font-size:.25rem;font-weight: normal;line-height:.35rem;}
+main dl dd p.des{font-size:.2rem;line-height:.3rem;}
+main dl dd p.text{width:3.7rem;display:inline-block;color:#828282;font-size:.2rem;line-height:.3rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+main dl dd span{position:absolute;top:50%;margin-top:-.06rem;right:.2rem;color:#b2b2b2;}

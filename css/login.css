@@ -1,0 +1,27 @@
+.all header{background:#fff;border:none;}
+.all header ul{width:100%;display: flex;justify-content: space-between;}
+.all header ul li{height:100%;}
+.all header ul li:first-child{width:.75rem;display: flex;justify-content: center;align-items: center;}
+.close{font-size:.2rem;padding:20px;}
+
+main{padding-top:.15rem;}
+main h2{line-height:.37rem;font-size:.34rem;font-weight: normal;text-align: center;color:#000;}
+
+.tip{height:.36rem;line-height:.36rem;font-size:.18rem;color:#838383;text-align: center;}
+
+
+main .form{padding:0 .23rem;font-size:.25rem;}
+main .form .content{border-bottom:1px solid #3883c6;padding:0 .15rem;
+	display: flex;height:.78rem;justify-content: center;align-items: center;}
+main .form .content .input{flex:1;height:100%;position: relative;}
+main .form .content .input input{border:none;height:100%;width:100%;font-size:.25rem;}
+main .form .content .input label{position: absolute;left:8px;top:50%;margin-top:-30px;width:90%;color:#ccc;}
+main .form .content .input span{display:none;position: absolute;right:0;top:50%;margin-top:-41px;padding-right:.3rem;}
+main .form .content .identify{display:none;font-size:.23rem;color:#cdcdcd;}
+
+.btn{width:4.65rem;height:.66rem;margin:0 auto;display: block;border:none;border-radius:.15rem;
+	margin-top:.3rem;background:#4197fe;font-size:.25rem;color:#fff;opacity: 0.5;}
+.login{display: none;opacity: 1;}
+main>a{padding-top:.66rem;font-size:.25rem;color:#2a84f4;display:block;text-align:center;}
+
+

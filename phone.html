@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>网易邮箱App</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/phone.css">
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+	<div class="all">
+		<header>
+			<ul class="top">
+				<li><i class="iconfont">&#xe642;</i></li>
+				<li>通讯录</li>
+				<li><i class="iconfont">&#xe642;</i></li>
+			</ul>
+		</header>
+		
+		<div class="phone0">
+			<p class="left">
+				<i class="iconfont">&#xe642;</i>
+				<span class="cont">登录大师账号，通讯录一次添加，永不丢失</span>
+			</p>
+			<span class="close">x</span>
+		</div>
+		<main>
+			<img src="img/phone0.jpg" alt="">
+		</main>
+        
+		<footer>
+            <ul>
+                <li><a href="index.html"><i class="iconfont">&#xe642;</i><span>邮件</span></a></li>
+                <li><a href="live.html"><i class="iconfont">&#xe642;</i><span>生活</span></a></li>
+                <li><a href="phone.html" class="now"><i class="iconfont">&#xe642;</i><span>通讯录</span></a></li>
+                <li><a href="me.html"><i class="iconfont">&#xe642;</i><span>我</span></a></li>
+            </ul>
+        </footer>
+    </div>
+	
+<script type="text/javascript">
+	// phone0 删除
+	$(".close").click(function(){
+		$(this).parent().slideUp();
+		setTimeout(function(){
+			$(this).parent().remove();	
+		},1500);
+	});
+</script>
+<script type="text/javascript" src="js/mypathURL.js"></script>
+<script type="text/javascript">
+	
+	if(obj.username){
+		let data = [{}];
+	}
+</script>
+</body>
+</html>

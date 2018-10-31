@@ -1,0 +1,13 @@
+.all header ul.top{width:100%;display:flex;justify-content:center;align-items:center;padding:0;}
+.all header ul.top li{display:flex;justify-content:center;align-items:center;}
+.all header ul.top li:not(:nth-child(2)){width:.6rem;font-size:.27rem;}
+.all header ul.top li:nth-child(2){flex:1;}
+
+.phone0{height:.57rem;line-height:.57rem;background:#fff3c9;padding:0 0.15rem;display:flex;align-items: center;
+	justify-content: space-between;}
+.phone0 p.left{color:#eb8b27;align-items: center;height:100%;line-height:.57rem;}
+.phone0 p.left .cont{font-size:.2rem;height:100%;}
+.phone0 span.close{height:100%;padding: 0 .1rem;}
+
+main{display: flex;justify-content: center;align-items: center;margin-top:0;}
+main img{width:3.6rem;height:3.72rem;}
